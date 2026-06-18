@@ -191,7 +191,7 @@
         const SUPABASE_URL = 'https://wdiqlfmktaazgstrvdlv.supabase.co';
         const SUPABASE_ANON_KEY = 'sb_publishable_tFgxRAPnRQkcxzeyYCWEhA_5TNcAZ6n';
         
-        let supabase;
+        let supabaseClient;
         let currentUser = null;
 
         // Initialize Clerk
@@ -203,7 +203,7 @@
                 console.log('ClerkJS is loaded');
                 
                 // Initialize Supabase
-                supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+                supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
                 
                 // Check authentication state
                 checkAuthState();
